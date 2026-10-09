@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_header_background"
+        android:orientation="vertical"
+        android:paddingHorizontal="22dp"
+        android:paddingTop="22dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_eyebrow"
+            android:textColor="@color/cyan"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/home_title"
+            android:textColor="@color/ink"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/home_subtitle"
+            android:textColor="@color/muted"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="18dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/home_section_title"
+                android:textColor="@color/cyan_soft"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/homeCharacters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/home_card_characters"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="116dp"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/HomeCardIcon"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/home_icon_cyan"
+                    android:text="01"
+                    android:textColor="@color/cyan"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DOSSIÊS MARVEL"
+                        android:textColor="@color/cyan"
+                        android:textSize="10sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/HomeCardTitle"
+                        android:text="@string/home_characters_title" />
+
+                    <TextView
+                        android:id="@+id/homeCharactersDescription"
+                        style="@style/HomeCardDescription"
+                        android:text="@string/home_characters_page_description" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/HomeCardArrow"
+                    android:text=">"
+                    android:textColor="@color/cyan" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeTeams"
+                style="@style/HomeCard"
+                android:background="@drawable/home_card_teams"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <TextView
+                    style="@style/HomeCardIcon"
+                    android:background="@drawable/home_icon_violet"
+                    android:text="4+"
+                    android:textColor="@color/violet"
+                    android:textSize="16sp" />
+
+                <LinearLayout style="@style/HomeCardTextColumn">
+                    <TextView
+                        style="@style/HomeCardTitle"
+                        android:text="@string/home_teams_title" />
+                    <TextView
+                        android:id="@+id/homeTeamsDescription"
+                        style="@style/HomeCardDescription"
+                        android:text="@string/home_teams_description" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/HomeCardArrow"
+                    android:text=">"
+                    android:textColor="@color/violet" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeStories"
+                style="@style/HomeCard"
+                android:background="@drawable/home_card_stories"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <TextView
+                    style="@style/HomeCardIcon"
+                    android:background="@drawable/home_icon_gold"
+                    android:text="ARC"
+                    android:textColor="#FFFFD166"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    style="@style/HomeCardTextColumn"
+                    android:layout_marginStart="12dp">
+
+                    <TextView
+                        style="@style/HomeCardTitle"
+                        android:text="@string/home_stories_title" />
+
+                    <TextView
+                        android:id="@+id/homeStoriesDescription"
+                        style="@style/HomeCardDescription"
+                        android:text="@string/home_stories_description" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/HomeCardArrow"
+                    android:text=">"
+                    android:textColor="#FFFFD166" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="@string/home_scope_note"
+                android:textColor="@color/muted"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/homeAttribution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/attribution"
+        android:textColor="@color/muted"
+        android:textSize="12sp" />
+</LinearLayout>

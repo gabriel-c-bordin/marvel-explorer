@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="22dp">
+        <TextView android:id="@+id/catalogDetailPublisher" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textColor="@color/marvel_red"
+            android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/catalogDetailExtra" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:textColor="@color/ink" android:textSize="14sp" />
+        <TextView android:id="@+id/catalogDetailSummary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp"
+            android:textColor="@color/ink" android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>

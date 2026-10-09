@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="22dp" android:paddingVertical="12dp">
+        <LinearLayout android:id="@+id/realNameSection" style="@style/DetailSection">
+            <TextView style="@style/DetailLabel" android:text="@string/real_name" />
+            <TextView android:id="@+id/detailRealName" style="@style/DetailValue" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/publisherSection" style="@style/DetailSection">
+            <TextView style="@style/DetailLabel" android:text="@string/publisher" />
+            <TextView android:id="@+id/detailPublisher" style="@style/DetailValue" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/firstAppearanceSection" style="@style/DetailSection">
+            <TextView style="@style/DetailLabel" android:text="@string/first_appearance" />
+            <TextView android:id="@+id/detailFirstAppearance" style="@style/DetailValue" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/issueCountSection" style="@style/DetailSection">
+            <TextView style="@style/DetailLabel" android:text="@string/appearances" />
+            <TextView android:id="@+id/detailIssueCount" style="@style/DetailValue" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/summarySection" style="@style/DetailSection">
+            <TextView style="@style/DetailLabel" android:text="@string/summary" />
+            <TextView android:id="@+id/detailSummary" style="@style/DetailValue" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/powersSection" style="@style/DetailSection">
+            <TextView style="@style/DetailLabel" android:text="@string/powers" />
+            <TextView android:id="@+id/detailPowers" style="@style/DetailValue" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

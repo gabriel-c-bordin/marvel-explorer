@@ -1,0 +1,47 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+      function ownsProfile() {
+        return request.auth != null && request.auth.uid == userId;
+      }
+
+      function validProfile() {
+        let data = request.resource.data;
+        return data.keys().hasOnly([
+          'name', 'title', 'race', 'team', 'photoUrl', 'xp', 'level',
+          'totalMissions', 'unlockedMissionTypes', 'completedToday',
+          'unlockedMissions', 'achievements', 'updatedAt'
+        ])
+        && data.get('name', '') is string
+        && data.get('name', '').size() <= 32
+        && data.get('title', '') is string
+        && data.get('title', '').size() <= 40
+        && data.get('race', '') is string
+        && data.get('race', '').size() <= 32
+        && data.get('team', '') is string
+        && data.get('team', '').size() <= 40
+        && data.get('photoUrl', '') is string
+        && data.get('photoUrl', '').size() <= 2048
+        && data.get('xp', 0) is int
+        && data.get('xp', 0) >= 0
+        && data.get('level', 1) is int
+        && data.get('level', 1) >= 1
+        && data.get('totalMissions', 0) is int
+        && data.get('totalMissions', 0) >= 0
+        && data.get('unlockedMissionTypes', 0) is int
+        && data.get('unlockedMissionTypes', 0) >= 0
+        && data.get('unlockedMissionTypes', 0) <= 4
+        && data.get('completedToday', {}) is map
+        && data.get('unlockedMissions', {}) is map
+        && data.get('achievements', {}) is map
+        && data.get('updatedAt', request.time) is timestamp;
+      }
+
+      allow get: if ownsProfile();
+      allow list: if false;
+      allow create, update: if ownsProfile() && validProfile();
+      allow delete: if false;
+    }
+  }
+}

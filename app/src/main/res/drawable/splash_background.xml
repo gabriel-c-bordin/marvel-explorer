@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="270" android:startColor="#250A14" android:centerColor="#150A12" android:endColor="#080D18" />
+        </shape>
+    </item>
+    <item android:drawable="@drawable/splash_tech_lines" android:gravity="fill" />
+    <item android:drawable="@drawable/splash_mark" android:width="220dp" android:height="220dp" android:gravity="center" />
+</layer-list>

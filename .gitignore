@@ -1,0 +1,26 @@
+# Android Studio / Gradle
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+
+# Local Comic Vine credentials. Never commit this file.
+secrets.properties
+
+# Firebase app configuration is generated for a specific Firebase project.
+app/google-services.json
+
+# OS files
+.DS_Store
+Thumbs.db
+.gradle-home/
+
+# Local environment and credentials
+.env
+.env.*
+*.env
+secrets.properties
+local.properties
+**/google-services.json
+

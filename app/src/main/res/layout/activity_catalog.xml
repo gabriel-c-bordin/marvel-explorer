@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/app_background" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/card_background" android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/catalog_title" android:textColor="@color/ink"
+            android:textSize="25sp" android:textStyle="bold" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/catalog_subtitle" android:textColor="@color/muted"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <Spinner android:id="@+id/catalogSection" android:layout_width="match_parent"
+        android:layout_height="48dp" android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp" />
+    <TextView android:id="@+id/catalogScope" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingHorizontal="20dp"
+        android:paddingBottom="8dp" android:text="@string/catalog_scope_marvel"
+        android:textColor="@color/muted" android:textSize="12sp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:paddingHorizontal="16dp" android:paddingBottom="8dp">
+        <EditText android:id="@+id/catalogQuery" android:layout_width="0dp"
+            android:layout_height="50dp" android:layout_weight="1"
+            android:layout_marginEnd="8dp" android:background="@drawable/input_background"
+            android:hint="@string/search_hint" android:importantForAutofill="no"
+            android:imeOptions="actionSearch" android:inputType="text"
+            android:maxLines="1" android:paddingHorizontal="14dp"
+            android:textColor="@color/ink" android:textColorHint="@color/muted" />
+        <Button android:id="@+id/catalogSearch" android:layout_width="92dp"
+            android:layout_height="50dp" android:background="@drawable/red_button_background"
+            android:text="@string/search" android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+    <TextView android:id="@+id/catalogStatus" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:paddingHorizontal="20dp"
+        android:paddingBottom="6dp" android:textColor="@color/muted" android:textSize="14sp" />
+    <ProgressBar android:id="@+id/catalogProgress" android:layout_width="36dp"
+        android:layout_height="36dp" android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout android:id="@+id/catalogResults" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:paddingHorizontal="16dp" android:paddingBottom="12dp" />
+    </ScrollView>
+    <Button android:id="@+id/catalogMore" android:layout_width="match_parent"
+        android:layout_height="48dp" android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp" android:background="@drawable/dark_button_background"
+        android:text="@string/load_more" android:textAllCaps="false"
+        android:textColor="@color/cyan_soft" android:visibility="gone" />
+    <TextView android:id="@+id/catalogAttribution" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:padding="10dp"
+        android:text="@string/attribution" android:textColor="@color/muted" android:textSize="12sp" />
+</LinearLayout>

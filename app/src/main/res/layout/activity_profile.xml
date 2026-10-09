@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/game_scene_background"
+        android:orientation="vertical"
+        android:paddingStart="22dp"
+        android:paddingTop="17dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="17dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S.H.I.E.L.D. · ARQUIVO DO AGENTE"
+            android:textColor="@color/cyan"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="MEU PERFIL"
+            android:textColor="@color/ink"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Sua identidade, sua equipe e suas conquistas."
+            android:textColor="@color/muted"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="17dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="17dp"
+            android:paddingBottom="22dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/profilePhoto"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:background="@drawable/profile_avatar_background"
+                        android:clipToOutline="true"
+                        android:contentDescription="Foto de perfil"
+                        android:padding="19dp"
+                        android:scaleType="centerCrop"
+                        android:src="@android:drawable/ic_menu_camera"
+                        android:tint="@color/cyan" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="IDENTIDADE DO AGENTE"
+                            android:textColor="@color/cyan"
+                            android:textSize="11sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="Adicione uma foto ou continue sem ela."
+                            android:textColor="@color/muted"
+                            android:textSize="12sp" />
+                        <Button
+                            android:id="@+id/profileChangePhoto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="7dp"
+                            android:background="@drawable/dark_button_background"
+                            android:minWidth="0dp"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:text="Escolher foto"
+                            android:textAllCaps="false"
+                            android:textColor="@color/cyan"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="NOME DE AGENTE"
+                    android:textColor="@color/cyan_soft"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/profileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Como quer ser chamado?"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLength="32"
+                    android:paddingStart="13dp"
+                    android:paddingEnd="13dp"
+                    android:singleLine="true"
+                    android:textColor="@color/ink"
+                    android:textColorHint="@color/muted"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="TÍTULO"
+                    android:textColor="@color/cyan_soft"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/profileTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Ex.: Protetor da Galáxia"
+                    android:inputType="textCapSentences"
+                    android:maxLength="40"
+                    android:paddingStart="13dp"
+                    android:paddingEnd="13dp"
+                    android:singleLine="true"
+                    android:textColor="@color/ink"
+                    android:textColorHint="@color/muted"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="RAÇA OU ESPÉCIE"
+                    android:textColor="@color/cyan_soft"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/profileRace"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:paddingStart="13dp"
+                    android:paddingEnd="13dp"
+                    android:singleLine="true"
+                    android:textColor="@color/ink"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="EQUIPE"
+                    android:textColor="@color/cyan_soft"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/profileTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/input_background"
+                    android:hint="Ex.: Vingadores, X-Men, nenhuma"
+                    android:inputType="textCapSentences"
+                    android:maxLength="40"
+                    android:paddingStart="13dp"
+                    android:paddingEnd="13dp"
+                    android:singleLine="true"
+                    android:textColor="@color/ink"
+                    android:textColorHint="@color/muted"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/profileSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/red_button_background"
+                    android:text="Salvar perfil"
+                    android:textAllCaps="false"
+                    android:textColor="@color/ink"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/profileSyncStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Perfil salvo neste aparelho"
+                    android:textColor="@color/muted"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:paddingStart="3dp"
+                android:paddingBottom="9dp"
+                android:text="PROGRESSO DE HERÓI"
+                android:textColor="@color/cyan"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:id="@+id/profileLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NÍVEL 01 · RECRUTA"
+                    android:textColor="@color/cyan"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/profileXp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="0 XP"
+                    android:textColor="@color/ink"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <ProgressBar
+                    android:id="@+id/profileProgress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="13dp"
+                    android:progressBackgroundTint="@color/line"
+                    android:progressTint="@color/cyan" />
+                <TextView
+                    android:id="@+id/profileMissions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:text="Missões concluídas: 0"
+                    android:textColor="@color/cyan_soft"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:paddingStart="3dp"
+                android:paddingBottom="9dp"
+                android:text="CONQUISTAS DESBLOQUEADAS"
+                android:textColor="@color/cyan"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+            <GridLayout
+                android:id="@+id/profileAchievements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:useDefaultMargins="false" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
